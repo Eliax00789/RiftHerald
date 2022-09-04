@@ -27,9 +27,9 @@ public class Language {
     }
 
     private boolean exists(String langcode) {
-        for (int i = 0; i < Json.getLanguagesJSON().length(); i++) {
+        for (int i = 0; i < Json.getInstance().getLanguagesJSON().length(); i++) {
             try {
-                if (Json.getLanguagesJSON().getString(i).equals(langcode)) {
+                if (Json.getInstance().getLanguagesJSON().getString(i).equals(langcode)) {
                     return true;
                 }
             } catch (JSONException e) {

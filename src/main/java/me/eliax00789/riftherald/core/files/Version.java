@@ -20,7 +20,7 @@ public class Version {
 
     public void setLatest() {
         try {
-            version = Json.getVersionsJSON().getString(0);
+            version = Json.getInstance().getVersionsJSON().getString(0);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -31,9 +31,9 @@ public class Version {
     }
 
     private boolean exists(String version) {
-        for (int i = 0; i < Json.getVersionsJSON().length(); i++) {
+        for (int i = 0; i < Json.getInstance().getVersionsJSON().length(); i++) {
             try {
-                if (Json.getVersionsJSON().getString(i).equals(version)) {
+                if (Json.getInstance().getVersionsJSON().getString(i).equals(version)) {
                     return true;
                 }
             } catch (JSONException e) {

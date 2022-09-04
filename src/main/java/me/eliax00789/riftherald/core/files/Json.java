@@ -11,37 +11,38 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class Json {
+    private static Json instance;
 
     private static JSONArray versions;
     private static JSONArray languages;
     private static JSONObject champion;
 
-    public static JSONArray getVersionsJSON() {
+    public JSONArray getVersionsJSON() {
         if (versions == null) {
             versions = getJSONArray("offline/RiftHerald/versions.json");
         }
         return versions;
     }
 
-    public static JSONArray getLanguagesJSON() {
+    public JSONArray getLanguagesJSON() {
         if (languages == null) {
             languages = getJSONArray("offline/RiftHerald/language.json");
         }
         return languages;
     }
 
-    public static JSONObject getChampionJSON() {
+    public JSONObject getChampionJSON() {
         if (champion == null) {
             champion = getJSON("offline/RiftHerald/champion.json");
         }
         return champion;
     }
 
-    public static JSONObject getChampJSON(String champ) {
+    public JSONObject getChampJSON(String champ) {
         return getJSON("offline/RiftHerald/champions/" + champ + ".json");
     }
 
-    private static JSONArray getJSONArray(String path) {
+    private JSONArray getJSONArray(String path) {
         try {
             File file = new File(path);
             BufferedInputStream is = new BufferedInputStream(new FileInputStream(file));
@@ -55,7 +56,7 @@ public class Json {
         }
     }
 
-    private static JSONObject getJSON(String path) {
+    private JSONObject getJSON(String path) {
         try {
             File file = new File(path);
             BufferedInputStream is = new BufferedInputStream(new FileInputStream(file));
@@ -67,5 +68,12 @@ public class Json {
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static Json getInstance() {
+        if (instance == null) {
+            instance = new Json();
+        }
+        return instance;
     }
 }
