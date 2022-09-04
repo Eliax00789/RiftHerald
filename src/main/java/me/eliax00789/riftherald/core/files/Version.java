@@ -1,6 +1,5 @@
 package me.eliax00789.riftherald.core.files;
 
-import me.eliax00789.riftherald.core.RiftHeraldException;
 import org.json.JSONException;
 
 public class Version {

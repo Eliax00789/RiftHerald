@@ -8,6 +8,7 @@ import me.eliax00789.riftherald.core.files.Version;
 
 public class Files {
     private static Files instance;
+
     public Files() {
         Download.getInstance();
         Json.getInstance();

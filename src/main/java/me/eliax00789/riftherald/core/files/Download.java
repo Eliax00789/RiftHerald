@@ -118,7 +118,7 @@ public class Download {
 
     private static boolean netIsAvailable() {
         try {
-            URL url = new URL("https://ddragon.leagueoflegends.com/api/versions.json");
+            URL url = new URL("https://ddragon.leagueoflegends.com/cdn/languages.json");
             URLConnection con = url.openConnection();
             con.connect();
             con.getInputStream().close();

@@ -1,6 +1,5 @@
 package me.eliax00789.riftherald.core.files;
 
-import me.eliax00789.riftherald.core.RiftHeraldException;
 import org.json.JSONException;
 
 public class Language {
@@ -11,9 +10,9 @@ public class Language {
         setDefault();
     }
 
-    public void set(String langcode) throws RiftHeraldException {
+    public void set(String langcode) {
         if (!exists(langcode)) {
-            throw new RiftHeraldException("Language code does not exist");
+            throw new IllegalArgumentException("Language code does not exist");
         }
         Language.langcode = langcode;
     }
