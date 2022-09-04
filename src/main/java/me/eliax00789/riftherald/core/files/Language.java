@@ -11,32 +11,12 @@ public class Language {
         setDefault();
     }
 
-    public void set(String langcode) throws RiftHeraldException {
-        if (!exists(langcode)) {
-            throw new RiftHeraldException("Language code does not exist");
-        }
-        Language.langcode = langcode;
-    }
-
     public void setDefault() {
         Language.langcode = "en_US";
     }
 
     public String get() {
         return langcode;
-    }
-
-    private boolean exists(String langcode) {
-        for (int i = 0; i < Json.getInstance().getLanguagesJSON().length(); i++) {
-            try {
-                if (Json.getInstance().getLanguagesJSON().getString(i).equals(langcode)) {
-                    return true;
-                }
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return false;
     }
 
     public static Language getInstance() {
