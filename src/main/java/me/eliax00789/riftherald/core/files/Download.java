@@ -11,14 +11,14 @@ import java.nio.channels.ReadableByteChannel;
 
 public class Download {
     private static Download instance;
-    private String baseUrl;
-    private String basePath;
+    private final String baseUrl;
+    private final String basePath;
 
     public Download() {
         versionsJSON();
         languagesJSON();
-        baseUrl = "https://ddragon.leagueoflegends.com/cdn/" + Version.getInstance().get() + "/data/" + Language.getInstance().get() + "/";
-        basePath = "offline/RiftHerald/" + Language.getInstance().get() + "/";
+        baseUrl = "https://ddragon.leagueoflegends.com/cdn/" + Version.getInstance().get() + "/data/";
+        basePath = "offline/RiftHerald/";
     }
 
     private void versionsJSON() {
@@ -33,60 +33,60 @@ public class Download {
     }
     public void challengesJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "challenges.json",basePath + "challenges.json");
+            download(baseUrl + Language.getInstance().get() + "/challenges.json",basePath + Language.getInstance().get() + "/challenges.json");
         }
     }
     public void championJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "championFull.json",basePath + "championFull.json");
+            download(baseUrl + Language.getInstance().get() + "/championFull.json",basePath + Language.getInstance().get() + "/championFull.json");
         }
     }
     public void itemJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "item.json",basePath + "item.json");
+            download(baseUrl + Language.getInstance().get() + "/item.json",basePath + Language.getInstance().get() + "/item.json");
         }
     }
     public void languageJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "language.json",basePath + "language.json");
+            download(baseUrl + Language.getInstance().get() + "/language.json",basePath + Language.getInstance().get() + "/language.json");
         }
     }
     public void mapJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "map.json",basePath + "map.json");
+            download(baseUrl + Language.getInstance().get() + "/map.json",basePath + Language.getInstance().get() + "/map.json");
         }
     }
     public void minionAssetsJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "mission-assets.json",basePath + "mission-assets.json");
+            download(baseUrl + Language.getInstance().get() + "/mission-assets.json",basePath + Language.getInstance().get() + "/mission-assets.json");
         }
     }
     public void profileIconJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "profileicon.json",basePath + "profileicon.json");
+            download(baseUrl + Language.getInstance().get() + "/profileicon.json",basePath + Language.getInstance().get() + "/profileicon.json");
         }
     }
     public void runesReforgedJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "runesReforged.json",basePath + "runesReforged.json");
+            download(baseUrl + Language.getInstance().get() + "/runesReforged.json",basePath + Language.getInstance().get() + "/runesReforged.json");
         }
     }
     public void summonerJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "summoner.json",basePath + "summoner.json");
+            download(baseUrl + Language.getInstance().get() + "/summoner.json",basePath + Language.getInstance().get() + "/summoner.json");
         }
     }
     public void allJSON() {
         if (netIsAvailable()) {
-            download(baseUrl + "challenges.json", basePath + "challenges.json");
-            download(baseUrl + "championFull.json", basePath + "championFull.json");
-            download(baseUrl + "item.json", basePath + "item.json");
-            download(baseUrl + "language.json", basePath + "language.json");
-            download(baseUrl + "map.json", basePath + "map.json");
-            download(baseUrl + "mission-assets.json", basePath + "mission-assets.json");
-            download(baseUrl + "profileicon.json", basePath + "profileicon.json");
-            download(baseUrl + "runesReforged.json", basePath + "runesReforged.json");
-            download(baseUrl + "summoner.json", basePath + "summoner.json");
+            download(baseUrl + Language.getInstance().get() + "/challenges.json", basePath + Language.getInstance().get() + "/challenges.json");
+            download(baseUrl + Language.getInstance().get() + "/championFull.json", basePath + Language.getInstance().get() + "/championFull.json");
+            download(baseUrl + Language.getInstance().get() + "/item.json", basePath + Language.getInstance().get() + "/item.json");
+            download(baseUrl + Language.getInstance().get() + "/language.json", basePath + Language.getInstance().get() + "/language.json");
+            download(baseUrl + Language.getInstance().get() + "/map.json", basePath + Language.getInstance().get() + "/map.json");
+            download(baseUrl + Language.getInstance().get() + "/mission-assets.json", basePath + Language.getInstance().get() + "/mission-assets.json");
+            download(baseUrl + Language.getInstance().get() + "/profileicon.json", basePath + Language.getInstance().get() + "/profileicon.json");
+            download(baseUrl + Language.getInstance().get() + "/runesReforged.json", basePath + Language.getInstance().get() + "/runesReforged.json");
+            download(baseUrl + Language.getInstance().get() + "/summoner.json", basePath + Language.getInstance().get() + "/summoner.json");
         }
     }
 
