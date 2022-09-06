@@ -11,11 +11,9 @@ public class Challenges {
     public Challenge byKey(int key) {
         return new Challenge((short) key);
     }
-
     public Challenge byId(int id) {
         return new Challenge(id);
     }
-
     public Challenge byName(String name) {
         return new Challenge(name);
     }

@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import java.util.Iterator;
 
 public class Challenge {
-    public static JSONObject challenge;
+    public JSONObject challenge;
 
     public Challenge(short key) {
         try {
@@ -45,25 +45,53 @@ public class Challenge {
         }
     }
 
-    public int id() throws JSONException {
-        return challenge.getInt("id");
+    public int id() {
+        try {
+            return challenge.getInt("id");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public String name() throws JSONException {
-        return challenge.getString("name");
+    public String name() {
+        try {
+            return challenge.getString("name");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public String description() throws JSONException {
-        return challenge.getString("description");
+    public String description() {
+        try {
+            return challenge.getString("description");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public String shortDescription() throws JSONException {
-        return challenge.getString("shortDescription");
+    public String shortDescription() {
+        try {
+            return challenge.getString("shortDescription");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public Boolean hasLeaderboard() throws JSONException {
-        return challenge.getBoolean("hasLeaderboard");
+    public Boolean hasLeaderboard() {
+        try {
+            return challenge.getBoolean("hasLeaderboard");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public LevelToIconPath levelToIconPath() throws JSONException {
-        return new LevelToIconPath(challenge.getJSONObject("levelToIconPath"));
+    public LevelToIconPath levelToIconPath() {
+        try {
+            return new LevelToIconPath(challenge.getJSONObject("levelToIconPath"));
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public Thresholds thresholds() throws JSONException {
-        return new Thresholds(challenge.getJSONObject("thresholds"));
+    public Thresholds thresholds() {
+        try {
+            return new Thresholds(challenge.getJSONObject("thresholds"));
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
