@@ -1,8 +1,6 @@
 package me.eliax00789.riftherald;
 
-import me.eliax00789.riftherald.core.Challenges;
-import me.eliax00789.riftherald.core.Champions;
-import me.eliax00789.riftherald.core.Files;
+import me.eliax00789.riftherald.core.*;
 
 public class RiftHerald {
     private static RiftHerald instance;
@@ -20,6 +18,14 @@ public class RiftHerald {
 
     public Champions champions() {
         return Champions.getInstance();
+    }
+
+    public Items items() {
+        return Items.getInstance();
+    }
+
+    public Language language() {
+        return Language.getInstance();
     }
 
     public static RiftHerald getInstance() {

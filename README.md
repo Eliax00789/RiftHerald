@@ -7,3 +7,4 @@ General Usage:<br>
   THEN USE THE CLASSES FOR IT (e.g.: for RiftHerald.champion() you need championJSON())<br>
   IF YOU DONT: ERROR (NOT MY PROBLEM)
 </p>
+| WARNING HEAVILY UNTESTED |

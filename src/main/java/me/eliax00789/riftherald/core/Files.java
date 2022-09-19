@@ -11,9 +11,6 @@ public class Files {
 
     public Files() {
         Download.getInstance();
-        Json.getInstance();
-        Language.getInstance();
-        Version.getInstance();
     }
 
     public Download download() {
