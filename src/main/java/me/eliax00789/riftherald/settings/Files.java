@@ -1,10 +1,9 @@
-package me.eliax00789.riftherald.core;
+package me.eliax00789.riftherald.settings;
 
-import me.eliax00789.riftherald.RiftHerald;
-import me.eliax00789.riftherald.core.files.Download;
-import me.eliax00789.riftherald.core.files.Json;
-import me.eliax00789.riftherald.core.files.Language;
-import me.eliax00789.riftherald.core.files.Version;
+import me.eliax00789.riftherald.settings.files.Download;
+import me.eliax00789.riftherald.settings.files.Json;
+import me.eliax00789.riftherald.settings.files.Language;
+import me.eliax00789.riftherald.settings.files.Version;
 
 public class Files {
     private static Files instance;

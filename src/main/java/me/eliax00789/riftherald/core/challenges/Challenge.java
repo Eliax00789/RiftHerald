@@ -2,7 +2,7 @@ package me.eliax00789.riftherald.core.challenges;
 
 import me.eliax00789.riftherald.core.challenges.challenge.LevelToIconPath;
 import me.eliax00789.riftherald.core.challenges.challenge.Thresholds;
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import org.json.JSONException;
 import org.json.JSONObject;
 

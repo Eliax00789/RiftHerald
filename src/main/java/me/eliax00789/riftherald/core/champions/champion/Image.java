@@ -1,6 +1,6 @@
 package me.eliax00789.riftherald.core.champions.champion;
 
-import me.eliax00789.riftherald.core.files.Version;
+import me.eliax00789.riftherald.settings.files.Version;
 import org.json.JSONException;
 import org.json.JSONObject;
 

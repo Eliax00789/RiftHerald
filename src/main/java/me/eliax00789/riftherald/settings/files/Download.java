@@ -1,4 +1,4 @@
-package me.eliax00789.riftherald.core.files;
+package me.eliax00789.riftherald.settings.files;
 
 import java.io.File;
 import java.io.FileOutputStream;

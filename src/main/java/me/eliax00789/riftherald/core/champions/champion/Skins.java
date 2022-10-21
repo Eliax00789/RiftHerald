@@ -1,7 +1,6 @@
 package me.eliax00789.riftherald.core.champions.champion;
 
 import me.eliax00789.riftherald.core.champions.champion.skins.Skin;
-import me.eliax00789.riftherald.core.files.Json;
 import org.json.JSONException;
 import org.json.JSONObject;
 

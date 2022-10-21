@@ -1,7 +1,7 @@
 package me.eliax00789.riftherald.core.champions;
 
 import me.eliax00789.riftherald.core.champions.champion.*;
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

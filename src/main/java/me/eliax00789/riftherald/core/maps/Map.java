@@ -1,6 +1,6 @@
 package me.eliax00789.riftherald.core.maps;
 
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import me.eliax00789.riftherald.core.maps.map.Image;
 import org.json.JSONException;
 import org.json.JSONObject;

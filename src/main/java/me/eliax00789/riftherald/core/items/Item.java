@@ -1,6 +1,6 @@
 package me.eliax00789.riftherald.core.items;
 
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import me.eliax00789.riftherald.core.items.item.Gold;
 import me.eliax00789.riftherald.core.items.item.Image;
 import org.json.JSONException;

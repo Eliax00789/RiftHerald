@@ -1,6 +1,8 @@
 package me.eliax00789.riftherald;
 
 import me.eliax00789.riftherald.core.*;
+import me.eliax00789.riftherald.settings.Files;
+import me.eliax00789.riftherald.settings.Language;
 
 public class RiftHerald {
     private static RiftHerald instance;

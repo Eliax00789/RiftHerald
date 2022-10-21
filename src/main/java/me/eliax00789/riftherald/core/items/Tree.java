@@ -1,10 +1,9 @@
 package me.eliax00789.riftherald.core.items;
 
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 

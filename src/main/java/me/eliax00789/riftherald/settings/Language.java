@@ -1,8 +1,7 @@
-package me.eliax00789.riftherald.core;
+package me.eliax00789.riftherald.settings;
 
-import me.eliax00789.riftherald.core.files.Json;
+import me.eliax00789.riftherald.settings.files.Json;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Iterator;
