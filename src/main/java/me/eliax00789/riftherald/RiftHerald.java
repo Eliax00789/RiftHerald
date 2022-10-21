@@ -10,10 +10,16 @@ public class RiftHerald {
         Files.getInstance();
     }
 
+    //SETTINGS
     public Files files() {
         return Files.getInstance();
     }
+    public Language language() {
+        return Language.getInstance();
+    }
 
+
+    //MAIN
     public Challenges challenges() {
         return Challenges.getInstance();
     }
@@ -26,9 +32,9 @@ public class RiftHerald {
         return Items.getInstance();
     }
 
-    public Language language() {
-        return Language.getInstance();
-    }
+    public Languages languages() { return Languages.getInstance(); }
+
+    public Maps maps() { return Maps.getInstance(); }
 
     public static RiftHerald getInstance() {
         if (instance == null) {
